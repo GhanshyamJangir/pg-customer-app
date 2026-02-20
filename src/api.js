@@ -1,7 +1,10 @@
-const BASE = "http://localhost:8080";
+import { API_BASE_URL } from "./config";
+
+const BASE = API_BASE_URL || (location.hostname === "localhost" ? "http://localhost:8080" : "");
 
 async function req(path, options) {
-  const res = await fetch(`${BASE}${path}`, options);
+  const url = BASE ? `${BASE}${path}` : path;
+  const res = await fetch(url, options);
   const text = await res.text();
   let json = {};
   try { json = text ? JSON.parse(text) : {}; } catch { json = { raw: text }; }
