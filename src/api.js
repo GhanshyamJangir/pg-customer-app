@@ -1,6 +1,6 @@
 import { API_BASE_URL } from "./config";
 
-const BASE = API_BASE_URL || (location.hostname === "localhost" ? "http://localhost:8080" : "");
+const BASE = "https://pg-booking-backend-448h.onrender.com";
 
 async function req(path, options) {
   const url = BASE ? `${BASE}${path}` : path;

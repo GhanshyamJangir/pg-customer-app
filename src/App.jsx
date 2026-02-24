@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 
-const API_BASE = import.meta?.env?.VITE_API_BASE || "http://127.0.0.1:8080/api";
+const API_BASE = import.meta?.env?.VITE_API_BASE || "https://pg-booking-backend-448h.onrender.com/api";
 const DEPOSIT_FIXED = 1000;
 const PLATFORM_FIXED = 299;
 
